@@ -1,7 +1,8 @@
 import { ColorfulFadingBanner, FadeLeft } from "@/components/common/Animations";
-import { PropsWithChildren, useRef } from "react";
+import { LoginModal } from "@/components/common/LoginModal";
+import { PropsWithChildren } from "react";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="flex justify-center">
       <div className="px-8 lg:mt-20 max-w-[1536px] w-full">
@@ -19,9 +20,11 @@ export default function Home() {
               <span className="text-pink-500">highly-amusing</span> way to level
               up your programming skills.
             </h5>
-            <button className=" bg-green-500 px-6 py-2 text-sm font-bold">
-              START HERE
-            </button>
+            <a href="#hardTruthTarget">
+              <button className=" bg-green-500 px-6 py-2 text-sm font-bold">
+                START HERE
+              </button>
+            </a>
           </div>
           <div className="w-full h-full flex justify-center">
             <div className="w-full lg:bg-[url(/tv.png)] bg-no-repeat bg-cover lg:max-w-[700px] lg:w-[500px] min-h-[300px] mx-auto relative">
@@ -34,6 +37,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <LoginModal />
         <div className="flex flex-col justify-center items-center">
           <StyledHalfSection>
             <div className="flex flex-col items-center mb-[100px]">
